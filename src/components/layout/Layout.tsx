@@ -4,12 +4,13 @@ import Footer from './Footer'
 
 const Layout = () => {
     return (
-        <div>
+        <>
             <Navbar />
-            <h1>Layout</h1>
-            <Outlet />
+            <div className="container">
+                <Outlet />
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

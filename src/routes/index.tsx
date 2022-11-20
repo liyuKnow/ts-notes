@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "../components/layout/index";
-import { Home, New } from "../components/pages/index";
+import ProtectedRoute from "./Protected";
+import { Home, New, Lost } from "../components/pages/index";
 
 const router = createBrowserRouter([
     {
@@ -13,10 +14,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/new",
-                element: <New />,
+                element: <ProtectedRoute><New /></ProtectedRoute>,
             },
+            {
+                path: "*",
+                element: <Lost />
+            }
         ],
     },
+
 
 ]);
 
