@@ -2,8 +2,8 @@ import React from 'react'
 import { Navigate } from 'react-router-dom'
 
 const ProtectedRoute = ({ children }) => {
-    if (true) {
-        return <Navigate to="/" />
+    if (false) {
+        return <Navigate to="/" /> || <Navigate to="/login" />
     }
     return children;
 }
